@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Soldgoods">
+
+    <EditText
+        android:id="@+id/kasaadet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#D83F3F"
+        android:ems="10"
+        android:hint="kasa adet"
+        android:inputType="number|numberDecimal"
+        android:numeric="decimal"
+        app:layout_constraintBottom_toTopOf="@+id/kilogram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/kilogram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="#D83F3F"
+        android:ems="10"
+        android:hint="kilogram"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/kilogramfiyat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kasaadet" />
+
+    <EditText
+        android:id="@+id/kilogramfiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="#D83F3F"
+        android:ems="10"
+        android:hint="fiyat"
+        android:inputType="textPersonName|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kilogram" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="62dp"
+        android:backgroundTint="#9DDA83"
+        android:onClick="hesapla"
+        android:text="hesapla"
+        app:layout_constraintBottom_toTopOf="@+id/tutar"
+        app:layout_constraintEnd_toEndOf="@+id/kilogramfiyat"
+        app:layout_constraintStart_toStartOf="@+id/tutar"
+        app:layout_constraintTop_toBottomOf="@+id/kilogramfiyat" />
+
+    <TextView
+        android:id="@+id/tutar"
+        android:layout_width="214dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="83dp"
+        android:text="tutar:"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
